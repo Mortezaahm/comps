@@ -1,38 +1,29 @@
-import { GoBellFill, GoCloud, GoDatabase } from "react-icons/go";
-import Button from "./Button";
-import { IoAlarm } from "react-icons/io5";
+import Accordion from "./components/Accordion";
+
 function App() {
+  const items = [
+    {
+      id: 1,
+      label: "What is React?",
+      content:
+        "React is a front end JavaScript framework.React is a front end JavaScript framework.React is a front end JavaScript framework.React is a front end JavaScript framework.",
+    },
+    {
+      id: 2,
+      label: "Why use React?",
+      content:
+        "React is a favorite among engineers because of its fast performance. React is a favorite among engineers because of its fast performance.",
+    },
+    {
+      id: 3,
+      label: "How do you use React?",
+      content:
+        "You use React by creating components. Components are the building blocks of a React application.",
+    },
+  ];
   return (
     <div>
-      <div>
-        <Button success rounded outline>
-          <GoBellFill /> Click me!!
-        </Button>
-      </div>
-      <div>
-        <Button secondary rounded>
-          <GoCloud />
-          Buy Now
-        </Button>
-      </div>
-      <div>
-        <Button warning outline rounded>
-          <GoDatabase />
-          See Deals
-        </Button>
-      </div>
-      <div>
-        <Button success>
-          <GoBellFill />
-          Hide Ads
-        </Button>
-      </div>
-      <div>
-        <Button danger>
-          <IoAlarm />
-          Cancel
-        </Button>
-      </div>
+      <Accordion items={items} />
     </div>
   );
 }
