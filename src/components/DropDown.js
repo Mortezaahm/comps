@@ -36,7 +36,7 @@ function DropDown({ options, value, onChange }) {
   const renderedOptions = options.map((option) => {
     return (
       <div
-        className="hover:bg-sky-100 rounded cursor-pointer p-1"
+        className="hover:bg-sky-100 rounded cursor-pointer p-1 transition-delay: 700ms"
         onClick={() => handleOptionClick(option)}
         key={option.value}
       >
